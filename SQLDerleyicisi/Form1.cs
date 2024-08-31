@@ -21,8 +21,8 @@ namespace SQLDerleyicisi
 
         private void buttonEXECUTE_Click(object sender, EventArgs e)
         {
-            string sorgu;
-            sorgu = richTextBox1.Text;
+            string sorgu = richTextBox1.Text;
+            
             try
             {
                 SqlDataAdapter dr = new SqlDataAdapter(sorgu, baglanti);
@@ -44,6 +44,29 @@ namespace SQLDerleyicisi
         {
             //sql kaynak onerme
             System.Diagnostics.Process.Start("https://www.w3schools.com/sql/");
+        }
+
+        private void buttoneklesılguncelle_Click(object sender, EventArgs e)
+        {
+            string sorgu = richTextBox1.Text;
+            try
+            {
+                
+                baglanti.Open();
+                SqlCommand komut = new SqlCommand(sorgu, baglanti);
+                komut.ExecuteNonQuery();
+                baglanti.Close();
+                SqlDataAdapter da = new SqlDataAdapter("select * from TblDepartman", baglanti);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("sorgunuzu tekrar kontrol edin ", "Uyarı", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+           
         }
     }
 }
