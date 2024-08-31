@@ -1,6 +1,6 @@
 SQL Derleyicisi
 ******************************
-SQLDerleyicisi, SQL sorgularını yazıp çalıştırmanızı sağlayan basit bir programdır. 
-Kullanıcılar, SQL sorgularını girip EXECUTE butonuna tıklayarak sorgunun sonuçlarını tablo halinde görebilirler. 
-Ayrıca, SQLHAKKINDA butonu SQL hakkında bilgi sunar. 
-Program, SQL öğrenimi ve hızlı sorgu testleri için ideal bir araçtır.
+Bu uygulama, SQL sorgularını yazıp çalıştırmanıza olanak tanıyan bir SQL derleyicisidir. 
+Kullanıcılar, EXECUTE butonuyla sorguları çalıştırarak sonuçları tablo olarak görebilirler. 
+Ayrıca, buttoneklesılguncelle butonu ile veri ekleme, güncelleme veya silme işlemleri yapabilir.
+buttonSQLHAKKINDA butonu ise SQL hakkında bilgi sağlayan bir kaynağa yönlendirir.
